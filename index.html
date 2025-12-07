@@ -32,7 +32,7 @@
       text-decoration: underline;
     }
 
-    /* HEADER WITH BACKGROUND */
+    /* HEADER FOR ZIWEN */
     header {
       text-align: center;
       padding: 4rem 2rem;
@@ -54,15 +54,7 @@
     .header-content {
       position: relative;
       z-index: 1;
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .person-block {
       text-align: center;
-      max-width: 250px;
     }
 
     .profile-photo {
@@ -107,14 +99,21 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      header {
-        padding: 3rem 1rem;
-      }
-      .profile-photo {
-        width: 120px;
-        height: 120px;
-      }
+    /* ANKE SECTION — visually similar to header but lighter */
+    .anke-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .anke-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2d3e50;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -130,24 +129,12 @@
     <a href="mailto:ziwen.teuber@uni.lu">Contact</a>
   </nav>
 
-  <!-- HEADER WITH TWO PEOPLE -->
+  <!-- HEADER: ZIWEN ONLY -->
   <header>
     <div class="header-content">
-
-      <!-- Person 1 -->
-      <div class="person-block">
-        <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="profile-photo" />
-        <h1>Ziwen Teuber</h1>
-        <p>Senior Researcher<br>Applied Developmental & Educational Psychology</p>
-      </div>
-
-      <!-- Person 2 -->
-      <div class="person-block">
-        <img src="img/anke.jpg" alt="Anke Weber" class="profile-photo" />
-        <h1>Anke Weber</h1>
-        <p>Researcher<br>Applied Developmental & Educational Psychology</p>
-      </div>
-
+      <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="profile-photo" />
+      <h1>Ziwen Teuber</h1>
+      <p>Senior Researcher<br>Applied Developmental & Educational Psychology</p>
     </div>
   </header>
 
@@ -184,6 +171,20 @@
       </ul>
     </section>
 
+    <!-- ANKE SECTION BELOW EVERYTHING -->
+    <section class="anke-section">
+      <img src="img/anke.jpg" alt="Anke Weber">
+      <h2>Anke Weber</h2>
+      <p>Researcher<br>Applied Developmental & Educational Psychology</p>
+      <p>
+        Anke works on developmental and educational psychology topics within the a2z Lab. 
+        She contributes to ongoing research projects and supports collaborations inside and 
+        outside the University of Luxembourg.
+      </p>
+      <div class="social-links">
+        <a href="mailto:anke.weber@uni.lu">Email Anke</a>
+      </div>
+    </section>
 
     <section>
       <h2>Contact</h2>
