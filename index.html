@@ -32,7 +32,7 @@
     /* HEADER */
     header {
       text-align: center;
-      padding: 4rem 2rem 2rem;
+      padding: 4rem 2rem;
       background: url('img/header-background_1.jpg') no-repeat center center;
       background-size: cover;
       color: white;
@@ -52,14 +52,24 @@
       z-index: 1;
     }
 
-    
-    .header-photo {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-bottom: 0.5rem;
+    /* OPTIONAL: clickable names instead of photos */
+    .people-links {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .people-links span {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      color: #fff;
+      text-decoration: underline;
+    }
+    .people-links span:hover {
+      opacity: 0.7;
     }
 
     /* SECTION STYLE */
@@ -74,11 +84,11 @@
     }
 
     .person-photo {
-      width: 300px;
-      height: 300px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #2d3e50;
+      border: 4px solid #2d3e50;
       margin-bottom: 1rem;
     }
 
@@ -91,7 +101,7 @@
     }
 
     html {
-      scroll-behavior: smooth; /* enables smooth scroll */
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -107,25 +117,15 @@
     <a href="mailto:ziwen.teuber@uni.lu">Contact</a>
   </nav>
 
-  <!-- HEADER WITH TWO PEOPLE -->
+  <!-- HEADER WITHOUT PHOTOS -->
   <header>
     <div class="header-content">
-      <h1>a2z: Family Reserach and Evidence-Based Family Coaching</h1>
+      <h1>a2z Lab</h1>
 
-      <div class="people-row">
-
-        <!-- Header: Ziwen -->
-        <div class="header-person" onclick="document.getElementById('ziwen-section').scrollIntoView()">
-          <img src="img/IMG_4996.jpg" class="header-photo" alt="Ziwen Teuber">
-          <div><strong>Ziwen Teuber</strong></div>
-        </div>
-
-        <!-- Header: Anke -->
-        <div class="header-person" onclick="document.getElementById('anke-section').scrollIntoView()">
-          <img src="img/anke.jpg" class="header-photo" alt="Anke Weber">
-          <div><strong>Anke Weber</strong></div>
-        </div>
-
+      <!-- clickable names instead of photos -->
+      <div class="people-links">
+        <span onclick="document.getElementById('ziwen-section').scrollIntoView()">Ziwen Teuber</span>
+        <span onclick="document.getElementById('anke-section').scrollIntoView()">Anke Weber</span>
       </div>
     </div>
   </header>
