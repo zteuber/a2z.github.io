@@ -87,10 +87,12 @@
     }
 
     .person-photo img {
-  max-width: 200px;
-  border-radius: 50%; /* makes the image round */
-  object-fit: cover;
-}
+  width: 200px;        /* ensure width = height */
+  height: 200px;       /* ensures square */
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* crops the image to fit the circle */
+    }
+
 
 
     /* Responsive stacking */
