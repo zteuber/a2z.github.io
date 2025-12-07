@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPICAS | Ziwen Teuber</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #2d3e50;
+      padding: 1rem;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER WITH BACKGROUND */
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: url('img/header-background_2.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4); /* Overlay für Lesbarkeit */
+      z-index: 0;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-logos {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .logos-background {
+      background: rgba(255,255,255,0.6); /* 80% Deckkraft */
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .logos-background img {
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    .first-letter {
+      text-decoration: underline;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #2d3e50;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1rem;
+      }
+      .logos-background img {
+        max-height: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="UPICAS.html">UPICAS</a>
+    <a href="projects.html">Other Projects</a>
+    <a href="mailto:ziwen.teuber@uni.lu">Contact</a>
+  </nav>
+
+  <!-- HEADER WITH BACKGROUND AND LOGOS -->
+  <header>
+    <div class="header-content">
+      <div class="project-logos">
+        <div class="logos-background">
+          <img src="img/UPICAS_LOGO_box.png" alt="UPICAS Project Logo" />
+          <img src="img/FNR_LOGO_BIG.png" alt="Funder Logo" />
+        </div>
+      </div>
+
+      <h1>
+        <span class="first-letter">U</span>npacking
+        <span class="first-letter">P</span>arental
+        <span class="first-letter">I</span>nvolvement
+        <span class="first-letter">C</span>hallenging
+        <span class="first-letter">A</span>chievement
+        <span class="first-letter">S</span>ituations
+      </h1>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <section>
+      <p>
+      The UPICAS project is funded by the Luxembourg National Research Fund (FNR) under the CORE funding scheme, 
+        with a total budget of €697,000 (Project Reference: C23/SC/18091359). 
+        The project is led by Ziwen Teuber and hosted at the University of Luxembourg, in collaboration with Theresa Dicke from 
+        the Australian Catholic University (Sydney, Australia) and Guy Roth from Ben-Gurion University (Be'er Scheva, Israel). 
+        UPICAS has received ethical approval from the Ethics Committee of the University of Luxembourg 
+        and from Luxembourg's Ministère de l'Education nationale, 
+        de l'Enfance et de la Jeunesse. The project collaborates closely with Elerne Forum, SCRIPT, and 
+        the Luxembourg Centre for Educational Testing (LUCET).  The project comprises three studies: 
+        (a) a parent-adolescent panel study, (b) a parenting coaching study, and (c) a meta-analysis.
+
+      </p>
+      </section>
+    
+    <section>
+    <h2>Panel Study</h2>
+      <p>
+      The panel study investigates the parental role in children's school and emotional development. 
+      Children's challenging achievement situations, such as failing an exam, can be stressful for both the children 
+      and their parents. The study aims to identify factors that support parents in maintaining constructive 
+      parenting practices in these demanding situations.
+      </p>
+
+    <p>
+      A total of 41 primary and secondary schools in Luxembourg participated in the three-wave parent-adolescent 
+      panel study. Approximately 1,200 students (Learning Cycles 4.1 and 6e classes in Wave 1) and their parents 
+      took part. The three waves were conducted in January/February, May/June, and October/November 2025, respectively.
+      Moreover, most of our parents have granted us the permission to match their children's ÉpStan data with UPICAS data,
+      allowing us to more comprehensively unterstand adolescent development in Luxembourg. Currently, we are finalizing
+      the last step of data collection. The preliminary results will be introduced at the DGPS Conference 2026 in Luxembourg.
+      </p>
+
+        
+    </section>
+
+    <section>
+      <h2>Parenting Coaching Study</h2>
+      <p>
+        In the parenting coaching study, we implement the "Tuning in to Teens" program and adapt it to the Luxembourgish context. 
+        Currently, we are inviting parents of young adolescents (aged 10–14 years) in Luxembourg to participate in this six-week 
+        parenting program, which meets once a week for two hours. 
+        The program is designed to help parents and adolescents navigate the many emotional challenges of this developmental stage. 
+        The sessions teach parents how to manage both their own and their adolescent’s emotions in ways that foster closeness and 
+        maintain open communication. 
+        <p>
+        By developing these skills, parents are likely to experience less family conflict, and adolescents are more likely to share 
+        the challenges they face. Research indicates that these factors can reduce the risk of mental health issues and substance abuse. 
+        The program is grounded in the concept of Emotional Intelligence, which involves using emotions to guide behavior and 
+        decision-making. Emotional Intelligence enables individuals to recognize and understand their own emotions, regulate 
+        them effectively, manage anger and conflict, navigate social situations, and support healthy interpersonal relationships. 
+        These skills help both parents and adolescents handle the complex social and emotional demands of everyday life.
+        </p>
+
+      <h3>Want to register?</h3>
+      <p>
+      Locations: Eltere Forum in Bertrange or University of Luxembourg, Campus Belval.<br>
+        </p>
+      Languages: English or German.<br>
+      <p>
+      A total of 100 parents can be enrolled. Currently, the program is almost full. 
+        We are doing our best to accommodate parents' location and language preferences; 
+        however, it will not be possible to meet all requests. Therefore, some parents will receive the coaching online in Autumn 2026.<br><br>
+        </p>
+      <p>
+        Registration by December 10, 2025: 
+      <a href="https://unilux.qualtrics.com/jfe/form/SV_2c46NRObS6VNwjA" target="_blank" rel="noopener noreferrer">
+      Click here to register and for more information
+        </p>
+  </a>.
+</p>
+
+    </section>
+
+    <section>
+      <h2>Meta-Analysis: Inside Out</h2>
+      <p>
+        The main reserach objective of Inside Out is to investigate the link between the use of specific emotion regulation
+        strategies and academic achievement in schoolstudents. 
+      </p>
+    </section>
+
+    <section>
+      <h2>Team Members</h2>
+      <p>
+        <ul>
+          <li> Principal Invesitgator: Ziwen Teuber</li>
+          <li> Research Assistant and PhD Candidate: Nora Vitali</li>
+          <li> Student Assistants: Sabina Anton, Leonie Constantinides</li>
+          </ul>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Ziwen Teuber — All rights reserved.
+  </footer>
+
+</body>
+</html>
