@@ -28,11 +28,8 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
 
-    /* HEADER: ZIWEN */
+    /* MAIN HEADER (dynamic) */
     header {
       text-align: center;
       padding: 4rem 2rem;
@@ -40,21 +37,19 @@
       background-size: cover;
       color: white;
       position: relative;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     header::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
+      inset: 0;
+      background: rgba(0,0,0,0.45);
       z-index: 0;
     }
 
     .header-content {
       position: relative;
       z-index: 1;
-      text-align: center;
     }
 
     .profile-photo {
@@ -62,11 +57,11 @@
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1rem;
       border: 4px solid white;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
     }
 
-    /* CONTENT */
     .container {
       max-width: 900px;
       margin: auto;
@@ -83,67 +78,24 @@
 
     footer {
       text-align: center;
-      padding: 2rem;
       background: #2d3e50;
       color: white;
+      padding: 2rem;
       margin-top: 2rem;
     }
 
-    .social-links a {
-      margin-right: 1rem;
-      color: #2d3e50;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .social-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* ANKE SECTION */
+    /* ANKE section */
     .anke-section {
       text-align: center;
       padding: 3rem 2rem;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     .anke-section img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      object-fit: cover;
       border: 4px solid #2d3e50;
-      margin-bottom: 1rem;
-    }
-
-    /* STICKY MINI-HEADER FOR ANKE */
-    #anke-sticky-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #2d3e50;
-      color: white;
-      padding: 0.5rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
-      z-index: 9999;
-    }
-
-    #anke-sticky-header.visible {
-      transform: translateY(0);
-    }
-
-    #anke-sticky-header img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
       object-fit: cover;
-      border: 2px solid white;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -159,70 +111,56 @@
     <a href="mailto:ziwen.teuber@uni.lu">Contact</a>
   </nav>
 
-  <!-- HEADER: ZIWEN -->
-  <header>
+  <!-- MAIN HEADER (will change content dynamically) -->
+  <header id="dynamic-header">
     <div class="header-content">
-      <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="profile-photo" />
-      <h1>Ziwen Teuber</h1>
-      <p>Senior Researcher<br>Applied Developmental & Educational Psychology</p>
+      <img id="header-photo" src="img/IMG_4996.jpg" class="profile-photo" />
+      <h1 id="header-name">Ziwen Teuber</h1>
+      <p id="header-title">Senior Researcher<br>Applied Developmental & Educational Psychology</p>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <div class="container">
 
     <section>
       <h2>About the a2z Lab</h2>
-      <p>
-        Welcome to our lab. We work in the Department of Behavioral and Cognitive Sciences 
-        at the University of Luxembourg, focusing on developmental, educational, and family psychology.
-      </p>
-      <p>
-        Below you find information about our projects, collaborations, open positions, and contact options.
-      </p>
+      <p>We conduct research in developmental and educational psychology...</p>
     </section>
 
-    <section>
-      <h2>Open Positions and Collaborations</h2>
-      <p>
-        Our group works closely with international researchers, local practitioners, and policymakers. 
-        If you are interested in joining the team or collaborating, please get in touch.
-      </p>
-    </section>
-
-
-    <!-- ANKE SECTION WITH ID FOR SCROLL TRIGGER -->
+    <!-- ANKE SECTION -->
     <section class="anke-section" id="anke-profile">
       <img src="img/anke.jpg" alt="Anke Weber">
       <h2>Anke Weber</h2>
       <p>Researcher<br>Applied Developmental & Educational Psychology</p>
-      <p>
-        Anke works on developmental and educational psychology topics within the a2z Lab. 
-        She contributes to ongoing research projects and supports collaborations inside and 
-        outside the University of Luxembourg.
-      </p>
-      <div class="social-links">
-        <a href="mailto:anke.weber@uni.lu">Email Anke</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>You can reach us here:</p>
-      <div class="social-links">
-        <a href="mailto:ziwen.teuber@uni.lu">Email Ziwen</a>
-        <a href="mailto:anke.weber@uni.lu">Email Anke</a>
-        <a href="https://www.researchgate.net/profile/Ziwen-Teuber">ResearchGate</a>
-        <a href="https://www.linkedin.com/in/ziwen-teuber-858065220/">LinkedIn</a>
-      </div>
+      <p>Anke works on developmental and educational psychology topics...</p>
     </section>
 
   </div>
 
-  <footer>
-    © 2025 a2z Lab — All rights reserved.
-  </footer>
+  <footer>© 2025 a2z Lab — All rights reserved.</footer>
 
-  <!-- STICKY MINI-HEADER FOR ANKE -->
-  <div id="anke-sticky-header">
-    <img src="img/a
+<script>
+  const headerPhoto = document.getElementById("header-photo");
+  const headerName = document.getElementById("header-name");
+  const headerTitle = document.getElementById("header-title");
+  const ankeSection = document.getElementById("anke-profile");
+
+  window.addEventListener("scroll", () => {
+    const rect = ankeSection.getBoundingClientRect();
+
+    if (rect.top <= 150) {
+      // SWITCH TO ANKE
+      headerPhoto.src = "img/anke.jpg";
+      headerName.textContent = "Anke Weber";
+      headerTitle.innerHTML = "Researcher<br>Applied Developmental & Educational Psychology";
+    } else {
+      // SWITCH BACK TO ZIWEN
+      headerPhoto.src = "img/IMG_4996.jpg";
+      headerName.textContent = "Ziwen Teuber";
+      headerTitle.innerHTML = "Senior Researcher<br>Applied Developmental & Educational Psychology";
+    }
+  });
+</script>
+
+</body>
+</html>
