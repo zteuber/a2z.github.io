@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab Members</title>
+  <title>Lab Members – a2z Lab</title>
 
   <style>
     body {
@@ -28,7 +28,6 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
@@ -63,7 +62,7 @@
       padding: 2rem 1rem;
     }
 
-    /* SECTION STYLE */
+    /* PERSON SECTION */
     .person-section {
       background: white;
       padding: 3rem 2rem;
@@ -71,6 +70,41 @@
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* FLEXIBLE PERSON LAYOUT */
+    .person-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .person-text {
+      flex: 1;
+      min-width: 250px;
+      text-align: left;
+    }
+
+    .person-photo img {
+      max-width: 200px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* Responsive stacking */
+    @media (max-width: 600px) {
+      .person-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .person-text {
+        text-align: center;
+      }
+      .person-photo img {
+        max-width: 150px;
+        margin-top: 1rem;
+      }
     }
 
     footer {
@@ -110,27 +144,58 @@
   <!-- MAIN CONTENT -->
   <div class="container">
 
-    <section class="person-section person-nora">
-  <div class="person-content">
-    <div class="person-text">
-      <h3>Nora Vitali, Family Psychotherapist and PhD Candidate</h3>
-      <p>
-        Nora specializes in family therapy and developmental psychology. Her research focuses on understanding family dynamics and supporting adolescents in challenging situations.
-      </p>
-    </div>
-    <div class="person-photo">
-      <img src="img/nora.jpg" alt="Nora Vitali" />
-    </div>
-  </div>
-</section>
-
-
+    <!-- Nora Section: text left, photo right -->
     <section class="person-section">
-      <h3>Leonie Constantinides, BSc</h3>
+      <div class="person-content">
+        <div class="person-text">
+          <h2>Nora Vitali, Family Psychotherapist and PhD Candidate</h2>
+          <p>
+            Nora specializes in family therapy and developmental psychology. Her research focuses on understanding family dynamics and supporting adolescents in challenging situations.
+          </p>
+          <p>
+            Languages: English, German
+          </p>
+        </div>
+        <div class="person-photo">
+          <img src="img/nora.jpg" alt="Nora Vitali">
+        </div>
+      </div>
     </section>
 
+    <!-- Leonie Section: photo left, text right -->
     <section class="person-section">
-      <h3>Sabina Anton</h3>
+      <div class="person-content">
+        <div class="person-photo">
+          <img src="img/leonie.jpg" alt="Leonie Constantinides">
+        </div>
+        <div class="person-text">
+          <h2>Leonie Constantinides, BSc</h2>
+          <p>
+            Leonie is a research assistant focusing on developmental psychology and family studies. She contributes to multiple ongoing projects, supporting data collection, analysis, and community engagement.
+          </p>
+          <p>
+            Languages: English, German
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sabina Section: text left, photo right -->
+    <section class="person-section">
+      <div class="person-content">
+        <div class="person-text">
+          <h2>Sabina Anton</h2>
+          <p>
+            Sabina is a research coordinator at a2z Lab, helping manage projects and facilitating collaboration across research studies. She ensures smooth communication and contributes to applied research initiatives.
+          </p>
+          <p>
+            Languages: English, German
+          </p>
+        </div>
+        <div class="person-photo">
+          <img src="img/sabina.jpg" alt="Sabina Anton">
+        </div>
+      </div>
     </section>
 
   </div>
