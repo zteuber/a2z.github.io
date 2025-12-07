@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Ziwen Teuber</title>
+  <title>Lab Members</title>
 
   <style>
     body {
@@ -28,42 +28,56 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 8rem 4rem;
+      background: url('img/header-background_4.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      position: relative;
     }
 
-    /* CONTENT */
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 0;
     }
 
-    section {
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* SECTION STYLE */
+    .person-section {
       background: white;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
       border-radius: 12px;
-      margin-bottom: 2rem;
+      text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    h2 {
-      margin-top: 0;
-    }
-
-    ul li {
-      margin-bottom: 1em;
-    }
-
+  
     footer {
       text-align: center;
       padding: 2rem;
       background: #2d3e50;
       color: white;
-      margin-top: 2rem;
+      margin-top: 3rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAVIGATION -->
