@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research Team | Teuber & Weber</title>
+  <title>a2z Lab</title>
 
   <style>
     body {
@@ -29,14 +29,16 @@
       font-size: 1.1rem;
     }
 
-    /* MAIN HEADER (dynamic) */
+    /* HEADER */
     header {
       text-align: center;
       padding: 4rem 2rem;
       background: url('img/header-background_1.jpg') no-repeat center center;
       background-size: cover;
       color: white;
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header::before {
@@ -52,50 +54,32 @@
       z-index: 1;
     }
 
-    .profile-photo {
-      width: 150px;
-      height: 150px;
+    /* PROFILE SECTION STYLE */
+    .person-section {
+      background: white;
+      padding: 3rem 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .person-photo {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
+      border: 4px solid #2d3e50;
       margin-bottom: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    section {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     footer {
       text-align: center;
+      padding: 2rem;
       background: #2d3e50;
       color: white;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-
-    /* ANKE section */
-    .anke-section {
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .anke-section img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #2d3e50;
-      object-fit: cover;
-      margin-bottom: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -111,53 +95,69 @@
     <a href="mailto:ziwen.teuber@uni.lu">Contact</a>
   </nav>
 
-  <!-- MAIN HEADER (will change content dynamically) -->
+  <!-- MAIN HEADER (dynamic text only) -->
   <header id="dynamic-header">
     <div class="header-content">
-      <img id="header-photo" src="img/IMG_4996.jpg" class="profile-photo" />
-      <h1 id="header-name">Ziwen Teuber</h1>
-      <p id="header-title">Senior Researcher<br>Applied Developmental & Educational Psychology</p>
+      <h1 id="header-title">a2z Lab</h1>
     </div>
   </header>
 
-  <div class="container">
+  <!-- ABOUT SECTION -->
+  <section class="person-section">
+    <h2>About the a2z Lab</h2>
+    <p>
+      We work in the Department of Behavioral and Cognitive Sciences 
+      at the University of Luxembourg, focusing on developmental, educational, and family psychology.
+    </p>
+  </section>
 
-    <section>
-      <h2>About the a2z Lab</h2>
-      <p>We conduct research in developmental and educational psychology...</p>
-    </section>
+  <!-- ZIWEN SECTION -->
+  <section class="person-section" id="ziwen-section">
+    <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="person-photo">
+    <h2>Ziwen Teuber</h2>
+    <p>Senior Researcher<br>Applied Developmental & Educational Psychology</p>
+  </section>
 
-    <!-- ANKE SECTION -->
-    <section class="anke-section" id="anke-profile">
-      <img src="img/anke.jpg" alt="Anke Weber">
-      <h2>Anke Weber</h2>
-      <p>Researcher<br>Applied Developmental & Educational Psychology</p>
-      <p>Anke works on developmental and educational psychology topics...</p>
-    </section>
+  <!-- ANKE SECTION -->
+  <section class="person-section" id="anke-section">
+    <img src="img/anke.jpg" alt="Anke Weber" class="person-photo">
+    <h2>Anke Weber</h2>
+    <p>Researcher<br>Applied Developmental & Educational Psychology</p>
+  </section>
 
-  </div>
+  <!-- OTHER CONTENT -->
+  <section class="person-section">
+    <h2>Upcoming Research Visits</h2>
+    <ul style="text-align:left; display:inline-block;">
+      <li>February 2026: KU Leuven — Moïra Mikolajczak & Isabelle Roskam</li>
+      <li>March 2026: University of Helsinki — Katja Upadyaya</li>
+      <li>March 2026: University of Jyväskylä — Kaisa Aunola</li>
+      <li>March 2026: Aalto University — Verena Distler</li>
+      <li>May–June 2026: University of Ghent — Maarten Vansteenkiste</li>
+    </ul>
+  </section>
 
-  <footer>© 2025 a2z Lab — All rights reserved.</footer>
+  <footer>
+    © 2025 a2z Lab — All rights reserved.
+  </footer>
 
 <script>
-  const headerPhoto = document.getElementById("header-photo");
-  const headerName = document.getElementById("header-name");
   const headerTitle = document.getElementById("header-title");
-  const ankeSection = document.getElementById("anke-profile");
+  const ziwenSection = document.getElementById("ziwen-section");
+  const ankeSection = document.getElementById("anke-section");
 
   window.addEventListener("scroll", () => {
-    const rect = ankeSection.getBoundingClientRect();
+    const ziwenRect = ziwenSection.getBoundingClientRect();
+    const ankeRect = ankeSection.getBoundingClientRect();
 
-    if (rect.top <= 150) {
-      // SWITCH TO ANKE
-      headerPhoto.src = "img/anke.jpg";
-      headerName.textContent = "Anke Weber";
-      headerTitle.innerHTML = "Researcher<br>Applied Developmental & Educational Psychology";
-    } else {
-      // SWITCH BACK TO ZIWEN
-      headerPhoto.src = "img/IMG_4996.jpg";
-      headerName.textContent = "Ziwen Teuber";
-      headerTitle.innerHTML = "Senior Researcher<br>Applied Developmental & Educational Psychology";
+    if (ankeRect.top <= 150) {
+      headerTitle.textContent = "Anke Weber";
+    } 
+    else if (ziwenRect.top <= 150) {
+      headerTitle.textContent = "Ziwen Teuber";
+    } 
+    else {
+      headerTitle.textContent = "a2z Lab";
     }
   });
 </script>
